@@ -1,20 +1,21 @@
-import React from 'react'
-import Galeria from '../../components/Galeria'
-import CardPresentacion from '../../components/CardPresentacion'
+import React from "react";
+import Galeria from "../../components/Galeria";
+import CardPresentacion from "../../components/CardPresentacion";
+import Layout from "../../components/Layout";
+import FloatingShape from "../../components/FloatingShape";
+
 
 const index = () => {
   return (
-    <section className=' min-h-screen'>
-    <div className='h-full'>
-      <CardPresentacion/>
-     
-    </div>
-    <div className='sm:mt-96 pt-96'>
-    <Galeria/>
-    </div>
-  
+    <Layout>
+    <section className=" min-h-screen">
+      <div className="h-screen">
+      <FloatingShape/>
+      </div>
+      <Galeria/>
     </section>
-  )
-}
+    </Layout>
+  );
+};
 
-export default index
+export default index;
