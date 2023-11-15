@@ -14,11 +14,24 @@ const Galeria = () => {
 
   return (
     <section>
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center md:justify-between gap-4 ms-10 mt-3">
+        {/* Cuadro de información a la izquierda en dispositivos móviles, arriba en desktop */}
+        <div className="md:order-1 border-2 border-blue-600 h-64 w-80">
+          <h3 className="text-xl font-semibold mb-2 text-center">Título</h3>
+          <p>Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
         {/* Mostrar la imagen principal según el estado */}
-        <Image className="rounded-lg mx-auto" src={imagenPrincipal} alt="principal" width={350} height={296}/>
+        <div className="md:order-2">
+          <Image className="rounded-lg" src={imagenPrincipal} alt="principal" width={350} height={296} />
+        </div>
+        {/* Cuadro de información a la derecha en dispositivos móviles, abajo en desktop */}
+        <div className="md:order-3 mt-4 md:mt-0 border-2 border-blue-600 h-64 w-64">
+          <h3 className="text-xl font-semibold mb-2">Precio y Otras Info</h3>
+          <p>Precio: $100</p>
+          <p>Otra información importante...</p>
+        </div>
       </div>
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-5 gap-4 mt-4">
         {/* Mapear sobre las miniaturas y mostrarlas */}
         {[
           'https://res.cloudinary.com/di1v23yy0/image/upload/v1694041580/WhatsApp_Image_2023-09-06_at_19.01.03_dgkgi2.jpg',
@@ -45,3 +58,4 @@ const Galeria = () => {
 };
 
 export default Galeria;
+

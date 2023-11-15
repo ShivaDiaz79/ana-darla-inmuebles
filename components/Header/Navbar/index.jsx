@@ -14,15 +14,15 @@ const navItems = [
     href: "/",
   },
   {
-    title: "Work",
+    title: "Departamentos",
     href: "/work",
   },
   {
-    title: "About",
+    title: "Casas",
     href: "/about",
   },
   {
-    title: "Contact",
+    title: "Contacto",
     href: "/contact",
   },
 ]
@@ -37,7 +37,9 @@ export default function index() {
        <div className={styles.body}>
             <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
                     <div className={styles.header}>
-                        <p>Navigation</p>
+                        <p>Red Raices Inmuebles</p> 
+     
+    
                     </div>
                     {
                       navItems.map( (data, index) => {

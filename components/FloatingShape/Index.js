@@ -29,6 +29,7 @@ export default function Index() {
   useEffect( () => {
     window.addEventListener("mousemove", manageMouse)
     return () => window.removeEventListener("mousemove", manageMouse)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

@@ -1,11 +1,9 @@
 import React from "react";
 import Galeria from "../../components/Galeria";
-import CardPresentacion from "../../components/CardPresentacion";
 import Layout from "../../components/Layout";
-import FloatingShape from "../../components/FloatingShape";
+import FloatingShape from "../../components/FloatingShape/Index"
 
-
-const index = () => {
+const Index = () => {
   return (
     <Layout>
     <section className=" min-h-screen">
@@ -18,4 +16,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
